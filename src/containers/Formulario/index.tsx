@@ -41,7 +41,7 @@ const Formulario = () => {
         />
         <Campo
           value={descricao}
-          onChange={({ target }) => setTitulo(target.value)}
+          onChange={({ target }) => setDescricao(target.value)}
           as="textarea"
           placeholder="Descrição da tarefa"
         />

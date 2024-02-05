@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import Tarefa from '../../components/Tarefa'
 import * as enums from '../../utils/enums/Tarefa'
+import Tarefa from '../../models/Tarefa'
 
 type TarefasState = {
   itens: Tarefa[]
@@ -57,7 +57,7 @@ const tarefasSlice = createSlice({
       if (tarefaJaExiste) {
         alert('Já existe uma tarefa com esse nome')
       } else {
-        const ultimaTarefa = state.itens[state.itens.length -1]
+        const ultimaTarefa = state.itens[state.itens.length - 1]
         const tarefaNova = {
           ...action.payload,
           id: ultimaTarefa ? ultimaTarefa.id + 1 : 1

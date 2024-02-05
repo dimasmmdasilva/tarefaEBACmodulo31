@@ -25,9 +25,10 @@ const ListaTarefas = () => {
         )
       }
     }
+    return tarefasFiltradas
   }
 
-  const exibeResultadoFiltrage = (quantidade: number) => {
+  const exibeResultadoFiltragem = (quantidade: number) => {
     let mensagem = ''
     const complementacao =
       termo !== undefined && termo.length > 0 ? 'e "${termo}"' : ''
@@ -40,7 +41,7 @@ const ListaTarefas = () => {
   }
 
   const tarefas = filtraTarefas()
-  const mensagem = exibeResultadoFiltrage(tarefas.length)
+  const mensagem = exibeResultadoFiltragem(tarefas.length)
 
   return (
     <MainContainer>
