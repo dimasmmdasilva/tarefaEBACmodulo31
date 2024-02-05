@@ -10,7 +10,7 @@ export type Props = {
   valor?: enums.Prioridade | enums.Status
 }
 
-const FiltroCard = ({ legenda, criterio }: Props) => {
+const FiltroCard = ({ legenda, criterio, valor }: Props) => {
   const dispatch = useDispatch()
   const { filtro, tarefas } = useSelector((state: RootReducer) => state)
   const verificaEstaAtivo = () => {

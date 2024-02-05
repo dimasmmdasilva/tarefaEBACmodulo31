@@ -13,7 +13,7 @@ const ListaTarefas = () => {
     let tarefasFiltradas = itens
     if (termo !== undefined) {
       tarefasFiltradas = tarefasFiltradas.filter(
-        (item) => item.titulo.toLowercase().search(termo.toLowerCase()) >= 0
+        (item) => item.titulo.toLowerCase().search(termo.toLowerCase()) >= 0
       )
       if (criterio === 'prioridade') {
         tarefasFiltradas = tarefasFiltradas.filter(
